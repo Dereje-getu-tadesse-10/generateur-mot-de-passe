@@ -39,7 +39,7 @@
                 <div class="length">
                     <div class="currentLength">
                         <div class="screen">12</div>
-                        <input type="range" id="range">
+                        <input type="range" step="1" value="12" id="range">
                     </div>
                     <div class="anssiFrance">
                         <div class="icon">
@@ -66,13 +66,13 @@
                 <div class="checkBoxContainer">
                     <div class="upperLower">
                         <div class="upper">
-                            <input type="checkbox" checked id="upper">
+                            <input type="checkbox" checked id="upperCase">
                             <p>uppercase</p>
                         </div>
 
                         <div class="lower">
-                            <input type="checkbox" checked id="lower">
-                            <p>uppercase</p>
+                            <input type="checkbox" checked id="lowerCase">
+                            <p>lowercase</p>
                         </div>
                     </div>
                         <!-- box 2 -->
@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="specialChars">
-                                <input type="checkbox" id="speChar">
+                                <input type="checkbox" checked id="symbol">
                                 <p>special characters</p>
                             </div>
                         </div>
@@ -102,9 +102,9 @@
             </section>
 
             <section id="end">
-                <button id="genrate">Generate password</button>
+                <button id="generate">Generate password</button>
                 <form>
-                    <input type="text" readonly placeholder="New password here">
+                    <input type="text"  placeholder="New password here" class="displayPassword">
                     <div class="greenCopy">
                         <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.0199 22.6639V24.628C16.0199 25.2789 15.4923 25.8065 14.8415 25.8065H1.48531C0.834441 25.8065 0.306824 25.2789 0.306824 24.628V6.55795C0.306824 5.90708 0.834441 5.37947 1.48531 5.37947H5.02076V19.9141C5.02076 21.4304 6.25429 22.6639 7.77056 22.6639H16.0199ZM16.0199 5.77229V0.665527H7.77056C7.11969 0.665527 6.59207 1.19314 6.59207 1.84401V19.9141C6.59207 20.565 7.11969 21.0926 7.77056 21.0926H21.1267C21.7776 21.0926 22.3052 20.565 22.3052 19.9141V6.95078H17.1984C16.5503 6.95078 16.0199 6.42046 16.0199 5.77229ZM21.9601 4.24866L18.7221 1.01068C18.5011 0.789682 18.2013 0.665529 17.8888 0.665527L17.5913 0.665527V5.37947H22.3052V5.08195C22.3052 4.76941 22.181 4.46967 21.9601 4.24866Z" fill="#1E2528"/>
@@ -125,5 +125,7 @@
         </section>
 
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
