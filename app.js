@@ -62,18 +62,21 @@ function createPassword() {
         password += keyToAdd();
       }
     }
+
     return password
 }
 
 generatePassword.addEventListener('click',()=>{
     let range =+ rangePassword.value;
-    createPassword()
-
+    displayPassword.value = createPassword();
 })
+copyPassword.addEventListener('click', ()=>{
+    copy()
+})
+// copy pass
 
-  // Return a random symbol
-//   const getRandomSymbol = () => {
-//     let symbols = "!@#$%^&*(){}[]=<>/,.";
-//     symbols = symbols.split("");
-//     return symbols[Math.floor(Math.random() * symbols.length)];
-//   };
+function copy() {
+    let copyText = document.querySelector(".displayPassword");
+    copyText.select();
+    document.execCommand("copy");
+  }
