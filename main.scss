@@ -21,7 +21,23 @@ main{
 #appContainer{
     position: relative;
     background-color: $appContainer;
+    // overflow: hidden;
+
 }
+
+// #blob1{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     // z-index: -1;
+// }
+
+// #blob2{
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     // z-index: -1;
+// }
 
 #logoContainer{
     display: flex;
@@ -51,21 +67,37 @@ main{
 
 
 .screen{
+    color:white;
     @include screen
 }
 
 
 .anssiFrance{
     @include anssi;
-
+    p{
+        color: $anssi ;
+    }
 }
-
+h1{
+    color: $mainColor;
+    text-shadow: 0px 0px 3.5px #C9ABFC;
+}
 
 @media only screen and (max-width:650px){
     #logoContainer{
         width: 100%;
         justify-content: space-evenly;
         padding-top: 10px;
+        div{
+            svg{
+                height: 34.52px;
+                width: 50px;
+            }
+        }
+        h1{
+            font-size:24px;
+        }
+
     }
     #appContainer{
         width:100%;
@@ -74,12 +106,20 @@ main{
 
     .passAnssi{
         width:85%;
-        margin: 20px auto;
+        margin: 50px auto;
     }
 
     .passLengthIcon{
         gap: 10px;
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            letter-spacing: 0.05em;
+            color: $mainColor;
+        }
     }
+
 
 }
 
@@ -87,15 +127,20 @@ main{
 
 .logoOption{
     display: flex;
+    p{
+        color: $mainColor;
+    }
 }
 .anssiFrance2{
     @include anssi;
     margin-top: 20px;
+    color:$anssi;
 }
 @media only screen and (max-width:650px){
 
     .checkBoxContainer{
         margin-top: 20px;
+        color: white;
     }
     #passwordOptions{
         width: 85%;
@@ -150,6 +195,7 @@ main{
 // scetion 3
 
 
+
 #end{
     button{
         @include generate;
@@ -157,12 +203,31 @@ main{
        justify-content: center;
        align-items: center;
     }
+
+}
+input{
+    font-family: $font;
+    color: $anssi;
+    background-color: #3D3A49;
+}
+@media only screen and (max-width:650px){
+    #end{
+        width: 85%;
+        margin: auto;
+    }
+
     form{
         display: flex;
         @include input;
+        margin-top: 30px;
+        @include copy;
+        border-radius: 10px;
         input{
             width: 80%;
+            outline: none;
+            border: none;
             border-radius: 10px 0px 0px 10px;
+            padding-left: 15px;
         }
         .greenCopy{
             display: flex;
@@ -170,13 +235,28 @@ main{
             align-items: center;
             margin: auto;
             cursor: pointer;
+
         }
     }
 }
 
+
+// susccess
+.success{
+    margin-top: 20px;
+    @include success;
+    color: $mainColor;
+}
+
 @media only screen and (max-width:650px){
-    #end{
+    .success{
         width: 85%;
-        margin: auto;
+        margin: 20px auto;
     }
+}
+
+input[type="checkbox"]{
+    height:20px;
+    width: 20px;
+    background-color: $mainColor;
 }
