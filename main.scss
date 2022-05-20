@@ -1,0 +1,64 @@
+@import './styles/_var.scss';
+@import './styles/_components.scss';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: $font;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background: $violetBackground;
+}
+
+#appContainer{
+    position: relative;
+    background-color: $appContainer;
+}
+
+#logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passAnssi{
+    margin-top: 20px;
+}
+
+.passLengthIcon{
+    display: flex;
+}
+
+.screen{
+    @include screen
+}
+
+@media only screen and (max-width:650px){
+    #logoContainer{
+        width: 100%;
+        justify-content: space-evenly;
+        padding-top: 10px;
+    }
+    #appContainer{
+        width:100%;
+        height: 100%;
+    }
+
+    .passAnssi{
+        width:90%;
+        margin: 20px auto;
+    }
+
+    .passLengthIcon{
+        gap: 10px;
+    }
+
+}
