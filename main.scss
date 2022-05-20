@@ -29,7 +29,10 @@ main{
     align-items: center;
 }
 
-.passAnssi{
+.passAnssi,
+.length,
+.anssiFrance
+{
     margin-top: 20px;
 }
 
@@ -37,9 +40,26 @@ main{
     display: flex;
 }
 
+
+.currentLength{
+    display: flex;
+    justify-content: space-between;
+    input{
+        width: 80%;
+    }
+}
+
+
 .screen{
     @include screen
 }
+
+
+.anssiFrance{
+    @include anssi;
+
+}
+
 
 @media only screen and (max-width:650px){
     #logoContainer{
@@ -53,7 +73,7 @@ main{
     }
 
     .passAnssi{
-        width:90%;
+        width:85%;
         margin: 20px auto;
     }
 
@@ -62,3 +82,5 @@ main{
     }
 
 }
+
+// section 2
