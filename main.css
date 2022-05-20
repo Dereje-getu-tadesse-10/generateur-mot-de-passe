@@ -14,12 +14,28 @@ body {
 main {
   width: 100vw;
   height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: linear-gradient(116.82deg, #C9ABFC 0%, #C9ABFC 0.01%, #7734E1 53.12%, #401486 98.44%);
 }
 
 #appContainer {
   position: relative;
   background-color: #1E2528;
+}
+
+.passLengthIcon {
+  gap: 10px;
+}
+
+.passLengthIcon p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  color: #C9ABFC;
 }
 
 #logoContainer {
@@ -32,12 +48,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.passAnssi,
-.length,
-.anssiFrance {
-  margin-top: 20px;
 }
 
 .passLengthIcon {
@@ -57,6 +67,10 @@ main {
 
 .currentLength input {
   width: 80%;
+}
+
+.checkBoxContainer {
+  color: white;
 }
 
 .screen {
@@ -87,7 +101,6 @@ main {
   gap: 10px;
   padding: 10px;
   height: auto;
-  width: 100%;
   background: #242C30;
   border-radius: 10px;
 }
@@ -102,12 +115,17 @@ h1 {
 }
 
 @media only screen and (max-width: 650px) {
+  .passAnssi,
+  .length,
+  .anssiFrance {
+    margin-top: 20px;
+  }
   #logoContainer {
     width: 100%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    padding-top: 10px;
+    padding-top: 20px;
   }
   #logoContainer div svg {
     height: 34.52px;
@@ -134,6 +152,10 @@ h1 {
     letter-spacing: 0.05em;
     color: #C9ABFC;
   }
+  .anssiFrance2 {
+    width: 85%;
+    margin: auto;
+  }
 }
 
 .logoOption {
@@ -146,6 +168,14 @@ h1 {
   color: #C9ABFC;
 }
 
+.logoOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
 .anssiFrance2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,7 +186,6 @@ h1 {
   gap: 10px;
   padding: 10px;
   height: auto;
-  width: 100%;
   background: #242C30;
   border-radius: 10px;
   margin-top: 20px;
@@ -269,7 +298,7 @@ input {
 @media only screen and (max-width: 650px) {
   #end {
     width: 85%;
-    margin: auto;
+    margin: 30px auto;
   }
   form {
     display: -webkit-box;
@@ -336,6 +365,221 @@ input {
 input[type="checkbox"] {
   height: 20px;
   width: 20px;
+  cursor: pointer;
   background-color: #C9ABFC;
+}
+
+.success {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 651px) {
+  #appContainer {
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    border-radius: 15px;
+  }
+  #logoContainer {
+    width: 100%;
+    gap: 51px;
+    padding-top: 30px;
+  }
+  #logoContainer svg {
+    width: 70px;
+    height: 48px;
+  }
+  #logoContainer h1 {
+    font-size: 36px;
+  }
+  .passAnssi {
+    width: 80%;
+    margin: 50px auto;
+  }
+  .passAnssi .passLengthIcon {
+    padding-top: 20px;
+  }
+  .passAnssi .length {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .passAnssi .length .currentLength {
+    gap: 20px;
+  }
+  .passAnssi .length .anssiFrance {
+    width: 50%;
+  }
+  #passwordOptions {
+    width: 80%;
+    margin: auto;
+  }
+  .checkBoxContainer .upperLower {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 20px;
+  }
+  .checkBoxContainer .upperLower .upper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+  }
+  .checkBoxContainer .upperLower .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+    margin-right: 56px;
+  }
+  .checkBoxContainer .numberChars {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 20px;
+  }
+  .checkBoxContainer .numberChars .numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+  }
+  .checkBoxContainer .numberChars .specialChars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+  }
+  .anssiFrance2 {
+    margin-top: 40px;
+    width: 80%;
+    margin: auto;
+  }
+  #passwordOptions {
+    margin: 50px auto;
+  }
+  #end {
+    margin-top: 25px;
+  }
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 53px;
+    border: none;
+    background: #3D3A49;
+    border-radius: 15px;
+    margin: 30px auto;
+    width: 80%;
+    background: -webkit-gradient(linear, left top, right top, from(#C4A4FB), to(#8345E5));
+    background: linear-gradient(90deg, #C4A4FB 0%, #8345E5 100%);
+    -webkit-box-shadow: -5px 5px 10px rgba(32, 33, 50, 0.2), 5px -5px 10px rgba(32, 33, 50, 0.2), -5px -5px 10px rgba(39, 41, 61, 0.9), 5px 5px 13px rgba(32, 33, 50, 0.9), inset 1px 1px 2px rgba(39, 41, 61, 0.3), inset -1px -1px 2px rgba(32, 33, 50, 0.5);
+            box-shadow: -5px 5px 10px rgba(32, 33, 50, 0.2), 5px -5px 10px rgba(32, 33, 50, 0.2), -5px -5px 10px rgba(39, 41, 61, 0.9), 5px 5px 13px rgba(32, 33, 50, 0.9), inset 1px 1px 2px rgba(39, 41, 61, 0.3), inset -1px -1px 2px rgba(32, 33, 50, 0.5);
+    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px;
+  }
+  form input {
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 15px;
+  }
+  form .greenCopy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    cursor: pointer;
+  }
+  .success {
+    width: 35%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #logoContainer {
+    width: 80%;
+    gap: 80px;
+    margin: auto;
+  }
+  #logoContainer h1 {
+    font-size: 45px;
+  }
+  #logoContainer svg {
+    height: 59.88;
+    width: 86.72;
+  }
+  .passAnssi {
+    width: 60%;
+  }
+  #passwordOptions {
+    width: 60%;
+  }
+  .checkBoxContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .anssiFrance2 {
+    width: 60%;
+    margin: auto;
+  }
+  #end {
+    margin-top: 20px;
+  }
+  form {
+    width: 40%;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .passAnssi {
+    max-width: 900px;
+  }
+  #passwordOptions {
+    max-width: 900px;
+  }
+  .anssiFrance2 {
+    max-width: 900px;
+  }
+  form {
+    max-width: 900px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

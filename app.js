@@ -7,6 +7,7 @@ let ge = rangePassword.value
 const displayPassword = document.querySelector('.displayPassword');
 const generatePassword = document.querySelector('#generate');
 const copyPassword = document.querySelector('.greenCopy');
+const success = document.querySelector('.success');
 
 const keys = {
     upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -71,7 +72,11 @@ generatePassword.addEventListener('click',()=>{
     displayPassword.value = createPassword();
 })
 copyPassword.addEventListener('click', ()=>{
-    copy()
+    if(!copy()){
+      success.style.visibility = "visible"
+    }else{
+      success.style.visibility = "hidden"
+    }
 })
 // copy pass
 
@@ -79,4 +84,4 @@ function copy() {
     let copyText = document.querySelector(".displayPassword");
     copyText.select();
     document.execCommand("copy");
-  }
+}
