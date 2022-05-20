@@ -84,3 +84,99 @@ main{
 }
 
 // section 2
+
+.logoOption{
+    display: flex;
+}
+.anssiFrance2{
+    @include anssi;
+    margin-top: 20px;
+}
+@media only screen and (max-width:650px){
+
+    .checkBoxContainer{
+        margin-top: 20px;
+    }
+    #passwordOptions{
+        width: 85%;
+        margin: 50px auto;
+    }
+
+    .logoOption{
+        display: flex;
+        width:100%;
+        gap: 10px;
+    }
+
+    .upperLower{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .upper{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .lower{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-right: 56px;
+        }
+    }
+
+    .numberChars{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .numbers{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .specialChars{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
+// scetion 3
+
+
+#end{
+    button{
+        @include generate;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    form{
+        display: flex;
+        @include input;
+        input{
+            width: 80%;
+            border-radius: 10px 0px 0px 10px;
+        }
+        .greenCopy{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width:650px){
+    #end{
+        width: 85%;
+        margin: auto;
+    }
+}
