@@ -22,8 +22,27 @@ main {
 }
 
 #appContainer {
-  position: relative;
   background-color: #1E2528;
+}
+
+#generate {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+#blob1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#blob2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .passLengthIcon {
@@ -369,6 +388,10 @@ input[type="checkbox"] {
   background-color: #C9ABFC;
 }
 
+input[type="range"] {
+  cursor: pointer;
+}
+
 .success {
   visibility: hidden;
 }
@@ -546,9 +569,11 @@ input[type="checkbox"] {
   }
   .passAnssi {
     width: 60%;
+    margin-top: 55px;
   }
   #passwordOptions {
     width: 60%;
+    margin-top: 55px;
   }
   .checkBoxContainer {
     display: -webkit-box;
@@ -560,11 +585,20 @@ input[type="checkbox"] {
     margin: auto;
   }
   #end {
-    margin-top: 20px;
+    margin-top: 50px;
   }
   form {
     width: 40%;
     margin-top: 30px;
+  }
+  .anssiFrance2 {
+    margin-top: 70px;
+  }
+  .currentLength {
+    width: 40%;
+  }
+  #generate {
+    font-size: 19px;
   }
 }
 
