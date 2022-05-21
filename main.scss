@@ -69,7 +69,9 @@ main{
 .passLengthIcon{
     display: flex;
 }
-
+#generatePass{
+    font-weight: bold;
+}
 
 .currentLength{
     display: flex;
@@ -522,3 +524,70 @@ input[type="range"]{
         max-width: 900px;
     }
 }
+
+// input type range style
+
+input[type="range"] {
+    -webkit-appearance: none;
+     appearance: none;
+     background: transparent;
+     cursor: pointer;
+}
+
+
+ input[type="range"]:focus {
+   outline: none;
+ }
+
+ input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #053a5f;
+    background:$rangeStyle;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+    background:$rangeStyle;
+ }
+
+ input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+    appearance: none;
+    margin-top: -12px;
+    background:$rangeStyle;
+    background-color: #5cd5eb;
+    box-shadow: -5px 5px 10px rgba(27, 33, 36, 0.2), 5px -5px 10px rgba(27, 33, 36, 0.2), -5px -5px 10px rgba(33, 41, 44, 0.9), 5px 5px 13px rgba(27, 33, 36, 0.9), inset 1px 1px 2px rgba(33, 41, 44, 0.3), inset -1px -1px 2px rgba(27, 33, 36, 0.5);
+    height: 2rem;
+    width: 1rem;
+ }
+
+ input[type="range"]:focus::-webkit-slider-thumb {
+   border: 1px solid #053a5f;
+   outline: 3px solid #053a5f;
+   outline-offset: 0.125rem;
+ }
+
+ input[type="range"]::-moz-range-track {
+    border-radius: 0.5rem;
+    height: 0.5rem;
+    background:$rangeStyle;
+ }
+
+
+ input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 999px;
+    background:$mainColor;
+    height: 20px;
+    width: 20px;
+ }
+
+
+//  change slector color and backgorund
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: $mainColor;
+  }
+
+::selection {
+    color: white;
+    background: $mainColor;
+}
+
