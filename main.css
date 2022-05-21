@@ -583,6 +583,12 @@ input[type="range"] {
 }
 
 @media only screen and (min-width: 1000px) {
+  main {
+    height: 105vh;
+  }
+  #genearte {
+    width: 90%;
+  }
   #logoContainer {
     width: 80%;
     gap: 80px;
@@ -625,7 +631,7 @@ input[type="range"] {
   .currentLength {
     width: 40%;
   }
-  #generate {
+  #generatePass {
     font-size: 19px;
   }
 }
