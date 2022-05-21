@@ -10,31 +10,32 @@
 
 body{
     font-family: $font;
+    background: $violetBackground;
 }
 
 main{
     width: 100vw;
-    height: 100vh;
     margin: auto;
     display:flex;
-    background: $violetBackground;
 }
 
 #appContainer{
     // position: relative;
-    background-color: $appContainer;
+    // overflow: hidden;
 }
 
 #generate{
-    height: 100%;
+    width: 100%;
     position: relative;
     z-index: 1;
+    background-color: $appContainer;
 }
 
 #blob1{
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: -1;
 }
 
@@ -42,6 +43,7 @@ main{
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 100ù;
     z-index: -1;
 }
 
@@ -120,14 +122,14 @@ h1{
         }
 
     }
-    #appContainer{
+    #generate{
         width:100%;
         height: 100%;
     }
 
     .passAnssi{
         width:85%;
-        margin: 50px auto;
+        margin: 90px auto;
     }
 
     .passLengthIcon{
@@ -164,7 +166,7 @@ h1{
 }
 .anssiFrance2{
     @include anssi;
-    margin-top: 20px;
+    margin-top: 50px;
     color:$anssi;
 }
 @media only screen and (max-width:650px){
