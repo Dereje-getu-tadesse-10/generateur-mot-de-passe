@@ -11,6 +11,7 @@
 body{
     font-family: $font;
     background: $violetBackground;
+    background-repeat: no-repeat;
 }
 
 main{
@@ -19,15 +20,12 @@ main{
     display:flex;
 }
 
-#appContainer{
-    // position: relative;
-    // overflow: hidden;
-}
 
 #generate{
     width: 100%;
     position: relative;
     z-index: 1;
+    border-radius: 10px;
     background-color: $appContainer;
 }
 
@@ -37,6 +35,7 @@ main{
     left: 0;
     width: 100%;
     z-index: -1;
+    border-radius: 10px;
 }
 
 #blob2{
@@ -45,6 +44,7 @@ main{
     right: 0;
     width: 100ù;
     z-index: -1;
+    border-radius: 10px;
 }
 
 .passLengthIcon{
@@ -109,8 +109,10 @@ h1{
     }
     #logoContainer{
         width: 100%;
+        height: 70px;
         justify-content: space-evenly;
-        padding-top: 20px;
+        align-items: center;
+        background-color: $headerBackground;
         div{
             svg{
                 height: 34.52px;
@@ -170,7 +172,9 @@ h1{
     color:$anssi;
 }
 @media only screen and (max-width:650px){
-
+    #generate{
+        border-radius: 0;
+    }
     .checkBoxContainer{
         margin-top: 20px;
         color: white;
@@ -304,16 +308,27 @@ input[type="range"]{
 // tablette
 
 @media only screen and (min-width:651px){
+    main{
+        height: 100vh;
+    }
     #appContainer{
-        width:90%;
-        height: 95%;
+        width: 90%;
         margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     #generate{
+        width:100%;
+        height: 90%;
+
         border-radius: 15px;
     }
     #logoContainer{
         width: 100%;
         gap: 51px;
         padding-top: 30px;
+        background-color: none;
         svg{
             width: 70px;
             height: 48px;
@@ -396,7 +411,7 @@ input[type="range"]{
         margin: 50px auto;
     }
     #end{
-        margin-top: 25px;
+        margin-top: 20px;
     }
     form{
         display: flex;
@@ -423,6 +438,7 @@ input[type="range"]{
     .success{
         width: 35%;
         margin: auto;
+        margin-bottom:20px;
     }
 }
 

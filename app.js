@@ -5,7 +5,7 @@ let ge = rangePassword.value
 // const allCheckBox = document.querySelectorAll('input[type="checkbox"]');
 
 const displayPassword = document.querySelector('.displayPassword');
-const generatePassword = document.querySelector('#generate');
+const generatePassword = document.querySelector('#generatePass');
 const copyPassword = document.querySelector('.greenCopy');
 const success = document.querySelector('.success');
 
@@ -38,11 +38,6 @@ rangePassword.addEventListener('input', () => {
 
 function createPassword() {
 
-    // const upper = document.getElementById('upper').checked;
-    // const lower= document.getElementById('lower').checked;
-    // const number = document.getElementById('number').checked;
-    // const symbol = document.getElementById('speChar').checked;
-
     const upper = document.getElementById("upperCase").checked;
     const lower = document.getElementById("lowerCase").checked;
     const number = document.getElementById("number").checked;
@@ -68,9 +63,9 @@ function createPassword() {
 }
 
 generatePassword.addEventListener('click',()=>{
-    let range =+ rangePassword.value;
     displayPassword.value = createPassword();
 })
+
 copyPassword.addEventListener('click', ()=>{
     if(!copy()){
       success.style.visibility = "visible"
