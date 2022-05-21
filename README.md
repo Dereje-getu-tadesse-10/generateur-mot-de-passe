@@ -1,5 +1,5 @@
 ![Build with](https://forthebadge.com/images/badges/built-with-love.svg) 
-# generateur-mot-de-passe
+# Password generator
 
 mini projet de formation date : 20/05/2022.
 
