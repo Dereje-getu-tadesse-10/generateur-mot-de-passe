@@ -1,7 +1,9 @@
 ![Build with](https://forthebadge.com/images/badges/built-with-love.svg) 
 # generateur-mot-de-passe
 
-mini projet de formation date : 20/05/2022
+mini projet de formation date : 20/05/2022.
+
+***Intégration d'une maquette et ajout fonctionnalité pour que le générateur puisse générer un mot de passe aléatoirement parmi ces 5 propositions le choix de la taille du mot de passe et des lettres minuscules, majuscule des chiffres et des symboles.***
 
 ## Rendu final 
 
