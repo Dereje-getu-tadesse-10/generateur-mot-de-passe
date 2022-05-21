@@ -1,3 +1,4 @@
+![Build with](https://forthebadge.com/images/badges/built-with-love.svg) 
 # generateur-mot-de-passe
 
 ## Rendu final 
